@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import {
-  FaGithub, FaLinkedin,
+  FaGithub, FaLinkedin, FaDownload,
   FaCode, FaReact, FaAngular, FaVuejs,
   FaPhp, FaNodeJs, FaGit, FaHtml5, FaCss3, FaBootstrap, FaJava
 } from 'react-icons/fa';
@@ -137,6 +137,8 @@ const CONTACT = {
   location: 'Kallar Syedan, Rawalpindi, Pakistan',
   github: 'https://github.com/ShariSaleem',
   linkedin: 'https://linkedin.com/in/sheharyar-saleem-3a879b27b',
+  cvPath: '/Sheharyar_Saleem_CV.pdf',
+  cvFileName: 'Sheharyar_Saleem_CV.pdf',
 };
 
 /* -------------------- HOOKS -------------------- */
@@ -252,13 +254,23 @@ const Navbar = ({ active, scrolled }) => {
               ))}
             </nav>
 
-            <a
-              href={CONTACT.emailHref}
-              className="hidden lg:inline-flex items-center gap-3 text-[13px] tracking-[0.15em] uppercase text-[#F5F1EA] border-b border-[#C6A15B]/50 pb-1 hover:border-[#C6A15B] transition-colors duration-500"
-            >
-              Get in Touch
-              <HiOutlineArrowNarrowRight className="text-[#C6A15B]" />
-            </a>
+            <div className="hidden lg:flex items-center gap-6">
+              <a
+                href={CONTACT.cvPath}
+                download={CONTACT.cvFileName}
+                className="group inline-flex items-center gap-2 text-[13px] tracking-[0.15em] uppercase text-[#C6A15B] hover:text-[#F5F1EA] transition-colors duration-500"
+              >
+                <FaDownload size={11} className="group-hover:translate-y-0.5 transition-transform duration-500" />
+                CV
+              </a>
+              <a
+                href={CONTACT.emailHref}
+                className="inline-flex items-center gap-3 text-[13px] tracking-[0.15em] uppercase text-[#F5F1EA] border-b border-[#C6A15B]/50 pb-1 hover:border-[#C6A15B] transition-colors duration-500"
+              >
+                Get in Touch
+                <HiOutlineArrowNarrowRight className="text-[#C6A15B]" />
+              </a>
+            </div>
 
             <button
               onClick={() => setOpen(true)}
@@ -306,8 +318,18 @@ const Navbar = ({ active, scrolled }) => {
               </button>
             ))}
           </nav>
-          <div className="px-6 sm:px-10 pb-10 text-xs tracking-[0.2em] text-[#8a8a8a] uppercase">
-            {CONTACT.email}
+          <div className="px-6 sm:px-10 pb-10 space-y-6">
+            <a
+              href={CONTACT.cvPath}
+              download={CONTACT.cvFileName}
+              className="inline-flex items-center gap-3 px-6 py-3 border border-[#C6A15B]/40 text-[#C6A15B] text-[12px] tracking-[0.25em] uppercase hover:bg-[#C6A15B] hover:text-[#0E0E0E] transition-all duration-500"
+            >
+              <FaDownload size={12} />
+              Download CV
+            </a>
+            <div className="text-xs tracking-[0.2em] text-[#8a8a8a] uppercase">
+              {CONTACT.email}
+            </div>
           </div>
         </div>
       </div>
@@ -413,6 +435,15 @@ const Portfolio = () => {
                       <HiOutlineArrowNarrowRight />
                     </span>
                   </button>
+
+                  <a
+                    href={CONTACT.cvPath}
+                    download={CONTACT.cvFileName}
+                    className="group inline-flex items-center gap-3 text-[13px] tracking-[0.25em] uppercase text-[#C6A15B] hover:text-[#F5F1EA] transition-colors duration-500"
+                  >
+                    <FaDownload size={12} className="group-hover:translate-y-0.5 transition-transform duration-500" />
+                    Download CV
+                  </a>
 
                   <button
                     onClick={() => go('about')}
@@ -776,6 +807,15 @@ const Portfolio = () => {
                   <Icon size={16} />
                 </a>
               ))}
+
+              <a
+                href={CONTACT.cvPath}
+                download={CONTACT.cvFileName}
+                className="inline-flex items-center gap-2 text-[11px] tracking-[0.25em] uppercase text-[#C6A15B] border border-[#C6A15B]/40 px-4 py-2 hover:bg-[#C6A15B] hover:text-[#0E0E0E] transition-all duration-500"
+              >
+                <FaDownload size={11} />
+                CV
+              </a>
             </div>
 
             <div className="text-xs tracking-[0.25em] uppercase text-[#8a8a8a]">
