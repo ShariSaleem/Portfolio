@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import {
-  FaGithub, FaLinkedin, FaEnvelope, FaPhone,
+  FaGithub, FaLinkedin,
   FaCode, FaReact, FaAngular, FaVuejs,
   FaPhp, FaNodeJs, FaGit, FaHtml5, FaCss3, FaBootstrap, FaJava
 } from 'react-icons/fa';
@@ -10,7 +10,7 @@ import {
 } from 'react-icons/si';
 import {
   HiOutlineMenuAlt4, HiOutlineX, HiOutlineExternalLink,
-  HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker,
+  HiOutlineMail, HiOutlinePhone,
   HiOutlineArrowNarrowRight, HiOutlineArrowNarrowDown
 } from 'react-icons/hi';
 
@@ -63,7 +63,7 @@ const PROJECTS = [
     num: 'I',
     title: 'Dimunet',
     subtitle: 'Music Streaming Platform',
-    url: 'https://stream.yomie.be',
+    url: 'https://streams.yomie.be',
     description:
       'A comprehensive music streaming platform where paid users manage, schedule, and listen to thousands of songs — locally or on remote hardware. Features playlist management, offline playback, remote hardware control, audio equalizer, crossfade, and social sharing.',
     tech: ['Ionic', 'Angular', 'TypeScript', 'Node.js', 'PHP', 'MySQL', 'Firebase', 'Java'],
@@ -135,8 +135,8 @@ const CONTACT = {
   email: 'sharisaleem0@gmail.com',
   emailHref: 'mailto:sharisaleem0@gmail.com',
   location: 'Kallar Syedan, Rawalpindi, Pakistan',
-  github: 'https://github.com',
-  linkedin: 'https://linkedin.com',
+  github: 'https://github.com/ShariSaleem',
+  linkedin: 'https://linkedin.com/in/sheharyar-saleem-3a879b27b',
 };
 
 /* -------------------- HOOKS -------------------- */
